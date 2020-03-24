@@ -31,7 +31,7 @@ TDLnFxsVhVaDbJgEs+7baUwxcegrl4sOYHgTEmKpAqZ6vdH27mGMXR1hEkvf9xA/
 -----END CERTIFICATE-----"));
 			var client = new QueueManager.QueueManagerClient(channel);
 
-			var idx = 0;
+			var rand = new Random();
 
 			Task.Factory.StartNew(async () =>
 			{
@@ -39,7 +39,11 @@ TDLnFxsVhVaDbJgEs+7baUwxcegrl4sOYHgTEmKpAqZ6vdH27mGMXR1hEkvf9xA/
 				{
 					try
 					{
-						await client.QueueAsync(new MessageRequest { Payload = $"data {idx++}" });
+						await client.QueueAsync(new MessageRequest
+						{
+							Name = "Net45",
+							Payload = rand.Next(0, 5)
+						});
 					}
 					catch (Exception ex)
 					{

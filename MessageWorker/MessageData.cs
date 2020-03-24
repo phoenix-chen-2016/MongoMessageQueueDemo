@@ -2,6 +2,7 @@
 {
 	public class MessageData
 	{
-		public string Payload { get; set; }
+		public string Name { get; set; }
+		public int Payload { get; set; }
 	}
 }

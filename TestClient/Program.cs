@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Net.Http;
+using System.Reflection.PortableExecutable;
 using System.Threading.Tasks;
 using Grpc.Net.Client;
 using QueueService;
@@ -19,13 +20,18 @@ namespace TestClient
 			});
 			var client = new QueueManager.QueueManagerClient(channel);
 
-			var idx = 0;
+			var rand = new Random();
 
 			while (true)
 			{
 				try
 				{
-					await client.QueueAsync(new MessageRequest { Payload = $"data {idx++}" });
+					await client.QueueAsync(new MessageRequest
+					{
+						Name = "TestClient",
+						Payload = rand.Next(0, 5)
+					});
+
 					await Task.Delay(1000);
 				}
 				catch (Exception ex)

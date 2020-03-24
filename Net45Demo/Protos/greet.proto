@@ -25,7 +25,8 @@ service QueueManager {
 }
 
 message MessageRequest {
-    string payload = 1;
+    string name = 1;
+    int32 payload = 2;
 }
 
 message MessageReply {

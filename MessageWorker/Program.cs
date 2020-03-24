@@ -16,11 +16,10 @@ namespace MessageWorker
 		static void Main(string[] args)
 		{
 			Host.CreateDefaultBuilder(args)
-				.ConfigureServices((_, services) =>
+				.ConfigureServices(services =>
 				{
 					services
-						.AddMessageHandler<MessageData, DataHandler>()
-						.AddMessaging<MessageData>();
+						.AddMessageHandler<MessageData, DataHandler>();
 				})
 				.Build()
 				.Run();
