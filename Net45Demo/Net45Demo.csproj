@@ -75,6 +75,9 @@
     <Protobuf Include="..\QueueService\Protos\greet.proto">
       <Link>Protos\greet.proto</Link>
     </Protobuf>
+    <None Include="..\.editorconfig">
+      <Link>.editorconfig</Link>
+    </None>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
