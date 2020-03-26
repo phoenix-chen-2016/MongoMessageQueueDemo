@@ -4,6 +4,9 @@ option csharp_namespace = "QueueService";
 
 package greet;
 
+message EmptyReply {
+}
+
 // The greeting service definition.
 service Greeter {
   // Sends a greeting
@@ -30,4 +33,13 @@ message MessageRequest {
 }
 
 message MessageReply {
+}
+
+service Mongo {
+    rpc AddData(MongoAddRequest) returns (EmptyReply);
+}
+
+message MongoAddRequest {
+    string collectionName = 1;
+    string data = 2;
 }

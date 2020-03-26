@@ -72,10 +72,13 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Protobuf Include="..\QueueService\Protos\greet.proto">
+      <Link>Protos\greet.proto</Link>
+    </Protobuf>
     <None Include="App.config" />
     <None Include="packages.config" />
-    <Protobuf Include="Protos\greet.proto" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

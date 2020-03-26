@@ -11,9 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MessageWorker", "MessageWor
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Net45Demo", "Net45Demo\Net45Demo.csproj", "{0B33DE78-B370-48CD-B0C5-EFD068677E69}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessagingLibary", "MessagingLibary\MessagingLibary.csproj", "{7358632A-566C-483E-B1AE-924AD04F96B4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MessagingLibary", "MessagingLibary\MessagingLibary.csproj", "{7358632A-566C-483E-B1AE-924AD04F96B4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessageLibary.Abstractions", "MessageLibary.Abstractions\MessageLibary.Abstractions.csproj", "{2D84D8A5-B65A-4F1E-B79A-49BE8B1667E3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MessageLibary.Abstractions", "MessageLibary.Abstractions\MessageLibary.Abstractions.csproj", "{2D84D8A5-B65A-4F1E-B79A-49BE8B1667E3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

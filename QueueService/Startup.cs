@@ -34,6 +34,7 @@ namespace QueueService
 			{
 				endpoints.MapGrpcService<GreeterService>();
 				endpoints.MapGrpcService<QueueManagerService>();
+				endpoints.MapGrpcService<MongoService>();
 
 				endpoints.MapGet("/", async context =>
 				{

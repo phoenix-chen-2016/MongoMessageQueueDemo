@@ -3,6 +3,7 @@ using System.Net.Http;
 using System.Reflection.PortableExecutable;
 using System.Threading.Tasks;
 using Grpc.Net.Client;
+using Newtonsoft.Json.Linq;
 using QueueService;
 
 namespace TestClient
@@ -19,6 +20,7 @@ namespace TestClient
 				HttpClient = http
 			});
 			var client = new QueueManager.QueueManagerClient(channel);
+			var mongo = new Mongo.MongoClient(channel);
 
 			var rand = new Random();
 
@@ -26,10 +28,21 @@ namespace TestClient
 			{
 				try
 				{
+					var number = rand.Next(0, 5);
 					await client.QueueAsync(new MessageRequest
 					{
 						Name = "TestClient",
-						Payload = rand.Next(0, 5)
+						Payload = number
+					});
+
+					await mongo.AddDataAsync(new MongoAddRequest
+					{
+						CollectionName = "Test123",
+						Data = JObject.FromObject(new
+						{
+							Name = "TestClient",
+							Value = number
+						}).ToString()
 					});
 
 					await Task.Delay(1000);
