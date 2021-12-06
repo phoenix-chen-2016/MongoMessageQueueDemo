@@ -1,34 +1,20 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-
-	<PropertyGroup>
-		<OutputType>Exe</OutputType>
-		<TargetFramework>netcoreapp3.1</TargetFramework>
-		<Nullable>enable</Nullable>
-	</PropertyGroup>
-
-	<ItemGroup>
-	  <None Remove="Protos\.gitkeep" />
-	</ItemGroup>
-
-	<ItemGroup>
-		<PackageReference Include="Google.Protobuf" Version="3.11.4" />
-		<PackageReference Include="Grpc.Net.Client" Version="2.27.0" />
-		<PackageReference Include="Grpc.Net.ClientFactory" Version="2.27.0" />
-		<PackageReference Include="Grpc.Tools" Version="2.27.0">
-			<PrivateAssets>all</PrivateAssets>
-			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-		</PackageReference>
-		<PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
-	</ItemGroup>
-
-	<ItemGroup>
-		<Folder Include="Protos\" />
-	</ItemGroup>
-
-	<ItemGroup>
-		<Protobuf Include="..\QueueService\Protos\greet.proto" GrpcServices="Client">
-			<Link>Protos\greet.proto</Link>
-		</Protobuf>
-	</ItemGroup>
-
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Google.Protobuf" Version="3.11.4" />
+    <PackageReference Include="Grpc.Net.Client" Version="2.27.0" />
+    <PackageReference Include="Grpc.Net.ClientFactory" Version="2.27.0" />
+    <PackageReference Include="Grpc.Tools" Version="2.27.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Protobuf Include="..\QueueService\Protos\greet.proto" GrpcServices="Client" AdditionalImportDirs="D:\" Link="Protos\greet.proto" />
+  </ItemGroup>
 </Project>

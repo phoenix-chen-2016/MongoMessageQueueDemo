@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="..\packages\Grpc.Tools.2.27.0\build\Grpc.Tools.props" Condition="Exists('..\packages\Grpc.Tools.2.27.0\build\Grpc.Tools.props')" />
+  <Import Project="..\packages\Grpc.Tools.2.28.1\build\Grpc.Tools.props" Condition="Exists('..\packages\Grpc.Tools.2.28.1\build\Grpc.Tools.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -41,10 +41,10 @@
       <HintPath>..\packages\Google.Protobuf.3.11.4\lib\net45\Google.Protobuf.dll</HintPath>
     </Reference>
     <Reference Include="Grpc.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=d754f35622e28bad, processorArchitecture=MSIL">
-      <HintPath>..\packages\Grpc.Core.2.27.0\lib\net45\Grpc.Core.dll</HintPath>
+      <HintPath>..\packages\Grpc.Core.2.28.1\lib\net45\Grpc.Core.dll</HintPath>
     </Reference>
     <Reference Include="Grpc.Core.Api, Version=2.0.0.0, Culture=neutral, PublicKeyToken=d754f35622e28bad, processorArchitecture=MSIL">
-      <HintPath>..\packages\Grpc.Core.Api.2.27.0\lib\net45\Grpc.Core.Api.dll</HintPath>
+      <HintPath>..\packages\Grpc.Core.Api.2.28.1\lib\net45\Grpc.Core.Api.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Buffers, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
@@ -87,10 +87,10 @@
     <PropertyGroup>
       <ErrorText>此專案參考這部電腦上所缺少的 NuGet 套件。請啟用 NuGet 套件還原，以下載該套件。如需詳細資訊，請參閱 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的檔案是 {0}。</ErrorText>
     </PropertyGroup>
-    <Error Condition="!Exists('..\packages\Grpc.Core.2.27.0\build\net45\Grpc.Core.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Grpc.Core.2.27.0\build\net45\Grpc.Core.targets'))" />
-    <Error Condition="!Exists('..\packages\Grpc.Tools.2.27.0\build\Grpc.Tools.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Grpc.Tools.2.27.0\build\Grpc.Tools.props'))" />
-    <Error Condition="!Exists('..\packages\Grpc.Tools.2.27.0\build\Grpc.Tools.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Grpc.Tools.2.27.0\build\Grpc.Tools.targets'))" />
+    <Error Condition="!Exists('..\packages\Grpc.Tools.2.28.1\build\Grpc.Tools.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Grpc.Tools.2.28.1\build\Grpc.Tools.props'))" />
+    <Error Condition="!Exists('..\packages\Grpc.Tools.2.28.1\build\Grpc.Tools.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Grpc.Tools.2.28.1\build\Grpc.Tools.targets'))" />
+    <Error Condition="!Exists('..\packages\Grpc.Core.2.28.1\build\net45\Grpc.Core.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Grpc.Core.2.28.1\build\net45\Grpc.Core.targets'))" />
   </Target>
-  <Import Project="..\packages\Grpc.Core.2.27.0\build\net45\Grpc.Core.targets" Condition="Exists('..\packages\Grpc.Core.2.27.0\build\net45\Grpc.Core.targets')" />
-  <Import Project="..\packages\Grpc.Tools.2.27.0\build\Grpc.Tools.targets" Condition="Exists('..\packages\Grpc.Tools.2.27.0\build\Grpc.Tools.targets')" />
+  <Import Project="..\packages\Grpc.Tools.2.28.1\build\Grpc.Tools.targets" Condition="Exists('..\packages\Grpc.Tools.2.28.1\build\Grpc.Tools.targets')" />
+  <Import Project="..\packages\Grpc.Core.2.28.1\build\net45\Grpc.Core.targets" Condition="Exists('..\packages\Grpc.Core.2.28.1\build\net45\Grpc.Core.targets')" />
 </Project>
